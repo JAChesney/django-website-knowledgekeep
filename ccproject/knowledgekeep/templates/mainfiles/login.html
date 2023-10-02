@@ -1,0 +1,183 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="page-wrapper flex-vertical space-between">
+  <div
+    data-w-id="174f76fa-5b5b-59ce-a358-b31125968305"
+    data-animation="default"
+    data-collapse="medium"
+    data-duration="400"
+    data-easing="ease"
+    data-easing2="ease"
+    role="banner"
+    class="header-wrapper w-nav"
+  >
+    <div class="container-default w-container">
+      <div
+        data-w-id="174f76fa-5b5b-59ce-a358-b31125968307"
+        class="flex-horizontal"
+      >
+        <a href="/" class="header-logo-link w-nav-brand"
+          ><img
+            src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff56d76d538d_logo-web-writing-x-webflow-template.svg"
+            alt="Logo - Writing X Webflow Template"
+            class="header-logo"
+        /></a>
+      </div>
+    </div>
+  </div>
+  <section class="section hero v20">
+    <div class="container-default width-100 w-container">
+      <div class="inner-container _420px center">
+        <div class="w-users-userloginformwrapper log-in-form-block">
+          <form
+            data-wf-user-form-type="login"
+            data-wf-user-form-redirect="/user-account"
+            method="post"
+          >
+            <div
+              data-w-id="63fd6d75f913929a2a04e34700000000000d"
+              class="w-users-userformheader"
+            >
+              <div class="mg-bottom-24px">
+                <div class="inner-container _60px center">
+                  <img
+                    src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff236e6d539b_lock-account-icon-writing-x-webflow-template.svg"
+                    alt="Get Premium Access Icon - Writing X Webflow Template"
+                  />
+                </div>
+              </div>
+              <h1 class="display-2 mg-bottom-10px">
+                Log into <span class="text-no-wrap">your account</span>
+              </h1>
+              <p class="mg-bottom-24px keep">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit pulvinar
+                tellus odio sed tempor eu
+                <span class="text-no-wrap">scelerisque sit.</span>
+              </p>
+            </div>
+            <div
+              data-w-id="2335302f-edcf-c541-90ec-3e9265577b6b"
+              class="w-layout-grid grid-1-column gap-row-24px"
+            >
+              <div id="w-node-_2defe46e-6fcd-ed45-a48d-4703f9d2baf0-f76d5201">
+                <label for="Email" class="text-200 medium">Email address</label
+                ><input
+                  type="email"
+                  maxlength="256"
+                  placeholder=""
+                  name="Email"
+                  id="wf-log-in-email"
+                  class="input w-input"
+                  autocomplete="username"
+                  required=""
+                  data-wf-user-form-input-type="email"
+                />
+              </div>
+              <div id="w-node-aec0c7de-e576-7ddc-c4b2-ea67341f5201-f76d5201">
+                <label for="Email" class="text-200 medium">Password</label
+                ><input
+                  type="password"
+                  maxlength="256"
+                  placeholder=""
+                  name="Password"
+                  id="wf-log-in-password"
+                  class="input w-input"
+                  required=""
+                  data-wf-user-form-input-type="password"
+                />
+              </div>
+            </div>
+            <input
+              type="submit"
+              value="Log In"
+              data-wait="Please wait..."
+              data-w-id="63fd6d75f913929a2a04e347000000000016"
+              class="w-users-userformbutton btn-primary mg-top-24px w-button"
+            />
+            <div class="text-200">
+              <div
+                data-w-id="c27e5216-b184-67dd-6eb4-865d90234ca8"
+                class="text-center mg-top-24px"
+              >
+                <a
+                  href="/reset-password"
+                  class="text-200 medium text-decoration-none"
+                  >Forgot your password?</a
+                >
+                <div class="text-200 medium mg-top-16px">
+                  You don’t have an account?
+                  <a href="/signup" class="link">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div
+            style="display: none"
+            data-wf-user-form-error="true"
+            class="w-users-userformerrorstate error-message sign-error w-form-fail"
+          >
+            <div
+              class="user-form-error-msg"
+              wf-login-form-general-error-error="We&#x27;re having trouble logging you in. Please try again, or contact us if you continue to have problems."
+              wf-login-form-invalid-email_or_password-error="Invalid email or password. Please try again."
+            >
+              We&#x27;re having trouble logging you in. Please try again, or
+              contact us if you continue to have problems.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="footer-wrapper footer-bottom-wrapper">
+    <div class="container-default w-container">
+      {% comment %} <div
+        data-w-id="41ea38d8-3134-6a50-9d45-d1263b9e0237"
+        class="footer-bottom _40px"
+      >
+        <div class="w-layout-grid grid-footer-3-columns-v1">
+          <a
+            id="w-node-dab0a44c-2c72-7a77-baca-664745226410-3b9e0235"
+            href="/"
+            class="footer-logo-wrapper mg-bottom-0 w-inline-block"
+            ><img
+              src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff56d76d538d_logo-web-writing-x-webflow-template.svg"
+              alt="Logo - Writing X Webflow Template"
+              class="footer-logo"
+          /></a>
+          <p class="mg-bottom-0">
+            Copyright © Writing X | Designed by
+            <a href="https://brixtemplates.com/" target="_blank"
+              >BRIX Templates</a
+            >
+            - Powered by
+            <a href="https://webflow.com/" target="_blank">Webflow</a>
+          </p>
+          <div
+            id="w-node-dab0a44c-2c72-7a77-baca-664745226419-3b9e0235"
+            class="social-media-flex justify-end center-tablet"
+          >
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              class="social-icon-square size-30px w-inline-block"
+              ><div class="social-icon-font"></div></a
+            ><a
+              href="https://twitter.com/"
+              target="_blank"
+              class="social-icon-square size-30px w-inline-block"
+              ><div class="social-icon-font"></div></a
+            ><a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="social-icon-square size-30px w-inline-block"
+              ><div class="social-icon-font"></div></a
+            >
+          </div>
+        </div>
+      </div> {% endcomment %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

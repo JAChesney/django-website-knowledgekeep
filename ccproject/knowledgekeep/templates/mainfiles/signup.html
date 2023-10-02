@@ -1,0 +1,286 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="page-wrapper flex-vertical space-between">
+  <div
+    data-w-id="174f76fa-5b5b-59ce-a358-b31125968305"
+    data-animation="default"
+    data-collapse="medium"
+    data-duration="400"
+    data-easing="ease"
+    data-easing2="ease"
+    role="banner"
+    class="header-wrapper w-nav"
+  >
+    <div class="container-default w-container">
+      <div
+        data-w-id="174f76fa-5b5b-59ce-a358-b31125968307"
+        class="flex-horizontal"
+      >
+        <a href="/" class="header-logo-link w-nav-brand"
+          ><img
+            src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff56d76d538d_logo-web-writing-x-webflow-template.svg"
+            alt="Logo - Writing X Webflow Template"
+            class="header-logo"
+        /></a>
+      </div>
+    </div>
+  </div>
+  <section class="section hero v19">
+    <div class="container-default width-100 w-container">
+      <div class="sign-up-wrapper">
+        <div
+          id="w-node-_1a6a7060-a5ec-9b2d-cd93-3a40b6e96593-3c6d5223"
+          class="inner-container _450px _100---tablet"
+        >
+          <div class="w-users-usersignupformwrapper sign-up-form-block">
+            <div
+              tabindex="-1"
+              class="w-users-userformsuccessstate w-form-success"
+            >
+              <div class="w-users-userformheader">
+                <div class="color-neutral-800">
+                  <div class="line-rounded-icon success-message-check large">
+                    
+                  </div>
+                </div>
+                <h2 class="display-2 mg-bottom-8px">Account activated</h2>
+                <p class="text-center">
+                  Your account was created successfully. You can now log in by
+                  navigating to the
+                  <span class="text-no-wrap">link below.</span>
+                </p>
+                <a href="/log-in" class="btn-primary w-button">Go to login</a>
+              </div>
+              <div data-wf-user-form-redirect="" class="hidden-on-desktop">
+                <a href="/">If nothing happens, click here.</a>
+              </div>
+            </div>
+            <form method="post" action="/signup/">
+            {% csrf_token %}
+              <div class="text-center---mbl text-left---mbp">
+                <div class="mg-bottom-24px">
+                  <div class="inner-container _60px center---mbl left---mbp">
+                    <div class="image-wrapper icon-circle">
+                      <img
+                        alt="Create Your Account Icon - Writing X Webflow Template"
+                        src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ffece36d53b9_user-create-icon-writing-x-webflow-template.svg"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <h1 class="display-2 mg-bottom-10px">
+                  Create <span class="text-no-wrap">your account</span>
+                </h1>
+                <p class="mg-bottom-30px">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit
+                  pulvinar tellus odio sed tempor eu
+                  <span class="text-no-wrap">scelerisque sit.</span>
+                </p>
+              </div>
+              <div class="mg-bottom-1px keep">
+                <div class="w-layout-grid grid-1-column gap-row-24px">
+                  <div
+                    id="w-node-_489ff35a-03d3-df46-ec71-4dd0b16ba2b6-3c6d5223"
+                  >
+                    <label for="wf-sign-up-name">Username</label
+                    ><input
+                      type="text"
+                      placeholder="Enter your name"
+                      class="input w-input"
+                      maxlength="256"
+                      name="username"
+                      data-name="field"
+                      data-wf-user-field="wf-user-field-name"
+                      fieldType=""
+                      id="wf-sign-up-name"
+                      required=""
+                    />
+                  </div>
+                  <div
+                    id="w-node-_980e6367-29f9-65a5-1080-5788d511bb6a-3c6d5223"
+                    class="position-relative"
+                  >
+                    <label for="">Email address</label
+                    ><input
+                      type="email"
+                      id="wf-sign-up-email"
+                      placeholder="Enter your email address"
+                      maxlength="256"
+                      name="Email"
+                      data-w-id="63fd6d75f913922d4104e35300000000001c"
+                      class="input w-input"
+                      autocomplete="email"
+                      required=""
+                      data-wf-user-form-input-type="email"
+                    />
+                  </div>
+                  <div
+                    id="w-node-_1759f404-cb64-6d29-fb69-528513c2536e-3c6d5223"
+                    class="position-relative"
+                  >
+                    <label for="">Password</label
+                    ><input
+                      type="password"
+                      id="wf-sign-up-password"
+                      placeholder="Enter your password"
+                      maxlength="256"
+                      name="password"
+                      class="input w-input"
+                      required=""
+                      data-wf-user-form-input-type="password"
+                    />
+                  </div>
+                </div>
+              </div>
+                {% comment %} <label class="w-checkbox mg-bottom-0"
+                    >
+                    <div
+                    class="w-checkbox-input w-checkbox-input--inputType-custom checkbox-circle"
+                    ></div>
+                    <input
+                    type="checkbox"
+                    name="Checkbox"
+                    data-name="Checkbox"
+                    data-wf-user-field="wf-user-field-accept-privacy"
+                    placeholder=""
+                    id="wf-sign-up-accept-privacy"
+                    required=""
+                    style="opacity: 0; position: absolute; z-index: -1"
+                    /><span
+                    class="mg-left-10px color-neutral-600 w-form-label"
+                    for="Checkbox"
+                    >By creating an account, I agree to this website&#x27;s
+                    privacy policy and terms
+                    <span class="text-no-wrap">of service.</span></span
+                    ></label
+                > {% endcomment %}
+              <input
+                type="submit"
+                value="Create account"
+                {% comment %} data-wait="Please wait..." {% endcomment %}
+                class="w-users-userformbutton btn-primary mg-top-40px w-button"
+              />
+              <div class="text-center mg-top-16px">
+                <div>
+                  Already have an account?
+                  <a href="/login" class="link">Log in</a>
+                </div>
+              </div>
+            </form>
+            <div
+              style="display: none"
+              data-wf-user-form-error="true"
+              class="w-users-userformerrorstate error-message sign-error w-form-fail"
+            >
+              <div
+                class="user-form-error-msg"
+                wf-signup-form-general-error-error="There was an error signing you up. Please try again, or contact us if you continue to have problems."
+                wf-signup-form-not-allowed-error="You&#x27;re not allowed to access this site, please contact the admin for support."
+                wf-signup-form-invalid-email-error="Make sure your email exists and is properly formatted (e.g., user@domain.com)."
+                wf-signup-form-email-already_exist-error="An account with this email address already exists. Log in or reset your password."
+                wf-signup-form-use-invite_email-error="Use the same email address your invitation was sent to."
+                wf-signup-form-invalid-password-error="Your password must be at least 8 characters."
+                wf-signup-form-not-verified-error="We couldn&#x27;t verify your account. Please try again, or contact us if you continue to have problems."
+                wf-signup-form-expired-token-error="This verification link has expired. A new verification link has been sent to your email. Please try again, or contact us if you continue to have problems."
+                wf-signup-form-validation-failed-error="There was an error in some of the information provided."
+              >
+                There was an error signing you up. Please try again, or contact
+                us if you continue to have problems.
+              </div>
+            </div>
+            <div
+              tabindex="-1"
+              class="w-users-usersignupverificationmessage w-form-verification"
+              data-wf-user-form-verification="true"
+            >
+              <div class="w-users-userformheader">
+                <div class="color-neutral-800">
+                  <div class="line-rounded-icon success-message-check large">
+                    
+                  </div>
+                </div>
+                <h2 class="mg-bottom-8px">Verification Required</h2>
+              </div>
+              <p class="text-center mg-bottom-0">
+                Account verification required. Please check your email to find
+                your unique
+                <span class="text-no-wrap">verification link.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-w-id="c38a7eb2-b5be-a8cd-13b7-ae301f8c5277"
+      style="opacity: 1"
+      class="sign-up-half-bg"
+    >
+      <img
+        src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff40876d53ba_keyboard-full-image-right-writing-x-webflow-template.jpg"
+        loading="eager"
+        alt="Create Your Account - Writing X Webflow Template"
+        sizes="(max-width: 767px) 100vw, 50vw"
+        srcset="
+          https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff40876d53ba_keyboard-full-image-right-writing-x-webflow-template-p-500.jpg  500w,
+          https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff40876d53ba_keyboard-full-image-right-writing-x-webflow-template-p-800.jpg  800w,
+          https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff40876d53ba_keyboard-full-image-right-writing-x-webflow-template.jpg       1474w
+        "
+        class="image cover sign-up-half-bg---image"
+      />
+    </div>
+  </section>
+  <div class="footer-wrapper footer-bottom-wrapper">
+    <div class="container-default w-container">
+      {% comment %}
+      <div
+        data-w-id="41ea38d8-3134-6a50-9d45-d1263b9e0237"
+        class="footer-bottom _40px"
+      >
+        <div class="w-layout-grid grid-footer-3-columns-v1">
+          <a
+            id="w-node-dab0a44c-2c72-7a77-baca-664745226410-3b9e0235"
+            href="/"
+            class="footer-logo-wrapper mg-bottom-0 w-inline-block"
+            ><img
+              src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff56d76d538d_logo-web-writing-x-webflow-template.svg"
+              alt="Logo - Writing X Webflow Template"
+              class="footer-logo"
+          /></a>
+          <p class="mg-bottom-0">
+            Copyright © Writing X | Designed by
+            <a href="https://brixtemplates.com/" target="_blank"
+              >BRIX Templates</a
+            >
+            - Powered by
+            <a href="https://webflow.com/" target="_blank">Webflow</a>
+          </p>
+          <div
+            id="w-node-dab0a44c-2c72-7a77-baca-664745226419-3b9e0235"
+            class="social-media-flex justify-end center-tablet"
+          >
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              class="social-icon-square size-30px w-inline-block"
+              ><div class="social-icon-font"></div></a
+            ><a
+              href="https://twitter.com/"
+              target="_blank"
+              class="social-icon-square size-30px w-inline-block"
+              ><div class="social-icon-font"></div></a
+            ><a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="social-icon-square size-30px w-inline-block"
+              ><div class="social-icon-font"></div></a
+            >
+          </div>
+        </div>
+      </div>
+      {% endcomment %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
