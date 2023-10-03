@@ -30,7 +30,7 @@
         >
           <a href="/" class="header-logo-link w-nav-brand"
             ><img
-              src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff56d76d538d_logo-web-writing-x-webflow-template.svg"
+              src="https://raw.githubusercontent.com/JAChesney/django-website-knowledgekeep/main/ccproject/knowledgekeep/templates/assets/Minimalist_Simple_Brand_Initial_Logo-removebg-preview.svg"
               alt="Logo - Writing X Webflow Template"
               class="header-logo"
           /></a>
@@ -362,18 +362,8 @@
                 <div class="menu-wrapper">
                   <div class="inner-container">
                     <div class="w-layout-grid grid-1-column">
+                      {% if request.user.is_authenticated %}
                       <a
-                        href="/login"
-                        class="nav-link categories-link-wrapper w-inline-block"
-                        ><div class="mg-right-6px">
-                          <img
-                            src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff84d36d53b5_log-in-icon-writing-x-webflow-template.svg"
-                            loading="lazy"
-                            alt="Log In Icon - Writing X Webflow Template"
-                          />
-                        </div>
-                        <div>Log in</div></a
-                      ><a
                         href="/user-account"
                         class="nav-link categories-link-wrapper w-inline-block"
                         ><div class="mg-right-6px">
@@ -385,6 +375,41 @@
                         </div>
                         <div>My account</div></a
                       >
+                      <a
+                        href="/logout"
+                        class="nav-link categories-link-wrapper w-inline-block"
+                        ><div class="mg-right-6px">
+                          <img
+                            src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff84d36d53b5_log-in-icon-writing-x-webflow-template.svg"
+                            loading="lazy"
+                            alt="Log In Icon - Writing X Webflow Template"
+                          />
+                        </div>
+                        <div>Log out</div></a>
+                      {% else %}
+                      <a
+                        href="/login"
+                        class="nav-link categories-link-wrapper w-inline-block"
+                        ><div class="mg-right-6px">
+                          <img
+                            src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff84d36d53b5_log-in-icon-writing-x-webflow-template.svg"
+                            loading="lazy"
+                            alt="Log In Icon - Writing X Webflow Template"
+                          />
+                        </div>
+                        <div>Log in</div></a>
+                      {% comment %}<a
+                        href="/user-account"
+                        class="nav-link categories-link-wrapper w-inline-block"
+                        ><div class="mg-right-6px">
+                          <img
+                            src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff52c06d5394_desing-icon-image-writing-x-webflow-template.svg"
+                            loading="lazy"
+                            alt="Design Icon - Writing X Webflow Template"
+                          />
+                        </div>
+                        <div>My account</div></a
+                      > 
                       <div
                         id="w-node-_4d4c9d67-56aa-8fd7-5031-bb0cd8025557-b4043bae"
                         class="divider _0px"
@@ -399,8 +424,8 @@
                             alt="Premium Icon - Writing X Webflow Template"
                           />
                         </div>
-                        <div>Premium access</div></a
-                      >
+                        <div>Premium access</div></a> {% endcomment %}
+                        {% endif %}
                     </div>
                   </div>
                 </div>

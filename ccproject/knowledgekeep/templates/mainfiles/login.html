@@ -29,11 +29,8 @@
     <div class="container-default width-100 w-container">
       <div class="inner-container _420px center">
         <div class="w-users-userloginformwrapper log-in-form-block">
-          <form
-            data-wf-user-form-type="login"
-            data-wf-user-form-redirect="/user-account"
-            method="post"
-          >
+          <form method="post" action="/login/">
+            {% csrf_token %}
             <div
               data-w-id="63fd6d75f913929a2a04e34700000000000d"
               class="w-users-userformheader"
@@ -64,11 +61,11 @@
                 ><input
                   type="email"
                   maxlength="256"
-                  placeholder=""
-                  name="Email"
+                  placeholder="Enter your email address"
+                  name="email"
                   id="wf-log-in-email"
                   class="input w-input"
-                  autocomplete="username"
+                  autocomplete="email"
                   required=""
                   data-wf-user-form-input-type="email"
                 />
@@ -78,8 +75,8 @@
                 ><input
                   type="password"
                   maxlength="256"
-                  placeholder=""
-                  name="Password"
+                  placeholder="Enter your password"
+                  name="password"
                   id="wf-log-in-password"
                   class="input w-input"
                   required=""

@@ -6,7 +6,37 @@ from .models import UserProfile
 def home(request):
     return render(request, 'mainfiles/home.html', {}) 
 
+def userlogout(request):
+    logout(request)
+    return redirect('/')
+
 def userlogin(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        print(email, password)
+
+        user = UserProfile.objects.get(email=email)
+        print(user)
+
+        if not user:
+            print('User does not exist')
+
+        # Authenticate user
+        user = authenticate(email=email, password=password)
+
+        print(user)
+
+        # Log user in
+        if not user:
+            print('Error logging in!')
+
+        
+        login(request, user)
+
+        # Redirecting to home
+        return redirect('/')
+    
     return render(request, 'mainfiles/login.html', {})
 
 def signup(request):
