@@ -402,6 +402,8 @@
             />
             </div>
         </div>
+        {%if request.user.is_authenticated %}
+        {% else %}
         <div
             data-w-id="d59b5440-1113-aec4-5df7-8e1b1b2e4650"
             class="cta-card cta-footer"
@@ -488,6 +490,7 @@
             </div>
             </div>
         </div>
+        {% endif %}
         <div
             data-w-id="d59b5440-1113-aec4-5df7-8e1b1b2e4667"
             class="footer-bottom text-right text-center-mb"

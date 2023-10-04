@@ -73,3 +73,8 @@ def signup(request):
         return redirect('/')
 
     return render(request, 'mainfiles/signup.html', {})
+
+def addpaper(request):
+    return render(request, 'mainfiles/addpaper.html', {})
+
+

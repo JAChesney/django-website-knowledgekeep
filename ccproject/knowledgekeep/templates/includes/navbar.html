@@ -241,6 +241,13 @@
                   >Contact</a
                 >
               </li>
+              {% if request.user.is_authenticated %}
+              <li class="header-nav-list-item left">
+                <a href="/addpaper/" class="header-nav-link w-nav-link"
+                  >Add Paper</a
+                >
+              </li>
+              {% endif %}
               <li class="header-nav-list-item left">
                 <div
                   data-hover="true"

@@ -1,0 +1,207 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- nav bar -->
+{% include 'includes/navbar.html' %}
+
+<section class="section hero v2">
+  <div class="container-default w-container">
+    <div class="inner-container _500px---mbl center">
+      <div class="w-layout-grid grid-3-columns contact-form-grid---main">
+        <div
+          data-w-id="01dc3a33-0585-3cd2-fa90-2cc346f37823"
+          class="inner-container _500px _100---tablet"
+        >
+          <h1 class="display-2 mg-bottom-12px">
+            Get in touch with <span class="text-no-wrap">us today</span>
+          </h1>
+          <p class="mg-bottom-0">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit montes ipsum
+            lorem ornare lacus laoreet egestas
+            <span class="text-no-wrap">gravida blandit.</span>
+          </p>
+          <div class="divider _32px"></div>
+          <div>
+            <div class="display-4 mg-bottom-24px">More contact information</div>
+            <div class="inner-container _400px">
+              <div class="w-layout-grid grid-1-column gap-row-24px">
+                <a
+                  id="w-node-a55bdb97-fc1b-62e0-618a-0a5ba24bef5c-f56d51b4"
+                  href="mailto:contact@writing.com"
+                  class="contact-link w-inline-block"
+                  ><div class="inner-container _48px">
+                    <div class="image-wrapper icon-circle">
+                      <img
+                        src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff00196d53dd_newsletter-email-icon-writing-x-webflow-template.svg"
+                        alt="Newsletter Email Icon - Writing X Webflow Template"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-200 color-neutral-600 mg-bottom-4px">
+                      Send me an email
+                    </div>
+                    <div class="heading-h6-size">contact@writing.com</div>
+                  </div></a
+                ><a
+                  id="w-node-f2e96b74-a869-a6a4-aa60-e0071ef38ea8-f56d51b4"
+                  href="tel:(414)097-5056"
+                  class="contact-link w-inline-block"
+                  ><div class="inner-container _48px">
+                    <div class="image-wrapper icon-circle">
+                      <img
+                        src="https://assets.website-files.com/640b89353805ffecac6d519d/640b89353805ff65f16d53e5_contact-phone-icon-writing-x-webflow-template.svg"
+                        alt="Contact Phone Icon - Writing X Webflow Template"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="text-200 color-neutral-600 mg-bottom-4px">
+                      Give us a call
+                    </div>
+                    <div class="heading-h6-size">(414) 097 - 5056</div>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="divider _32px"></div>
+          <div
+            class="w-layout-grid grid-2-columns _2-col-mbl social-media-links-v1"
+          >
+            <div class="display-4">Follow us</div>
+            <div class="w-layout-grid social-media-grid-top small right">
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                class="social-icon-square size-30px w-inline-block"
+                ><div class="social-icon-font"></div></a
+              ><a
+                href="https://twitter.com/"
+                target="_blank"
+                class="social-icon-square size-30px w-inline-block"
+                ><div class="social-icon-font"></div></a
+              ><a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-icon-square size-30px w-inline-block"
+                ><div class="social-icon-font"></div></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="divider-vertical contact-form-divider"></div>
+        <div
+          id="w-node-_01dc3a33-0585-3cd2-fa90-2cc346f3783d-f56d51b4"
+          data-w-id="01dc3a33-0585-3cd2-fa90-2cc346f3783d"
+          class="inner-container _568px width-100"
+        >
+          <div id="contact-form" class="contact-form-block w-form">
+            <form
+              id="wf-form-contact-Form"
+              name="wf-form-contact-Form"
+              method="POST"
+              action="/addpaper/"
+              enctype="multipart/form-data"
+            >
+            {% csrf_token %}
+              <div class="w-layout-grid grid-2-columns form-v1">
+                <div>
+                    <label for="Name">Paper title</label
+                    ><input
+                      type="text"
+                      class="input w-input"
+                      maxlength="256"
+                      name="paper-title"
+                      data-name="Name"
+                      placeholder="ex. Understanding TDA"
+                      id="Name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="paper-type">Paper type</label>
+                    <select
+                    required
+                    id="paper-type"
+                    name='paper-type'
+                    class="input w-input">
+                        <option value="journal">Journal</option>
+                        <option value="article">Article</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="is-published">Published?</label
+                    >
+                    <select
+                    id="is-published"
+                    name='is-published'
+                    required
+                    class="input w-input">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="Subject">Upload paper</label
+                    ><input
+                     accept="application/pdf"
+                      type="file"
+                      class="input w-input"
+                      name="file"
+                      data-name="Subject"
+                      placeholder="ex. Subscriptions"
+                      id="Subject"
+                      required
+                    />
+                  </div>
+                <div
+                  id="w-node-_01dc3a33-0585-3cd2-fa90-2cc346f37851-f56d51b4"
+                  class="text-area-wrapper"
+                >
+                <label for="paper-description">Paper description</label>
+                  <textarea
+                    id="paper-description"
+                    name="paper-description"
+                    maxlength="5000"
+                    data-name="Message"
+                    placeholder="Description of your paper"
+                    class="text-area w-input"
+                    required
+                  ></textarea>
+                </div>
+                <div
+                  id="w-node-_50c9549a-5d7c-589a-70fb-f77de6780f3a-f56d51b4"
+                  class="divider _0px"
+                ></div>
+                <input
+                  type="submit"
+                  value="Upload paper"
+                  data-wait="Please wait..."
+                  id="w-node-_01dc3a33-0585-3cd2-fa90-2cc346f37855-f56d51b4"
+                  class="btn-primary w-button"
+                />
+              </div>
+            </form>
+            <div class="success-message color-neutral-800 w-form-done">
+              <div>
+                <div class="line-rounded-icon success-message-check large">
+                  
+                </div>
+                <h2 class="display-3">Thank you</h2>
+                <div>
+                  Your message has been submitted. <br />We will get back to you
+                  within <span>24-48 hours.</span>
+                </div>
+              </div>
+            </div>
+            <div class="error-message w-form-fail">
+              <div>Oops! Something went wrong.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
