@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'knowledgekeepdb',
         'USER': 'root',
         'PASSWORD': '*222bda03jason*',
-        'HOST': 'localhost',
+        'HOST': os.environ['KP_DB_URL'],
         'PORT': '3306',
     }
 }
