@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .models import UserProfile
+from .models import UserProfile, Papers
 
 # Create your views here.
 def home(request):
@@ -75,6 +75,22 @@ def signup(request):
     return render(request, 'mainfiles/signup.html', {})
 
 def addpaper(request):
+
+     # uploading file
+    if request.method == 'POST':
+        paper_title = request.POST['paper-title']
+        paper_type = request.POST['paper-type']
+        paper_description = request.POST['paper-description']
+        published = request.POST['is-published']
+        paper_file = request.FILES['file']
+
+        # saving details to paper table
+        paper = Papers(user=request.user, paper_name=paper_title, paper_description=paper_description, type=paper_type, is_published=published == 'yes', file=paper_file)
+        paper.save()
+
     return render(request, 'mainfiles/addpaper.html', {})
 
-
+def papers(request):
+    papers = Papers.objects.all()
+    print(papers)
+    return render(request, 'mainfiles/papers.html', {'papers': papers})
