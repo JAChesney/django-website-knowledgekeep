@@ -1,0 +1,328 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- nav bar -->
+{% include 'includes/navbar.html' %}
+<section class="section hero v11">
+  <div class="container-default w-container">
+    <div>
+      <div class="w-layout-grid grid-2-columns product-page">
+        <div id="w-node-_8cfc71ea-8722-a9b3-4d26-4a7b2c6a7582-396d51bc">
+          <div class="subscribe-single-top-card">
+            <div
+              id="w-node-_58d4ce9a-5ea7-8c9b-4c68-f1faf2bb9e52-396d51bc"
+              data-w-id="58d4ce9a-5ea7-8c9b-4c68-f1faf2bb9e52"
+              style="
+                transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                opacity: 1;
+                transform-style: preserve-3d;
+              "
+              class="inner-container _460px"
+            >
+              <div class="heading-h5-size color-neutral-400 mg-bottom-8px">
+                Upgrade to
+              </div>
+              <h1 class="display-2 color-neutral-100 mg-bottom-12px">
+                Premium plan
+              </h1>
+              <p class="color-neutral-400 mg-bottom-24px">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit morbi
+                tortor rhoncus tristique condimentum nisl imperdiet tortor.
+              </p>
+              <div class="w-layout-grid grid-1-column gap-row-16px">
+                <div class="icon-list-item-wrapper">
+                  <img
+                    alt="check-white-icon-writing-x-webflow-template"
+                    src="https://assets-global.website-files.com/640b89353805ffecac6d519d/640b89353805ff9b3b6d53d8_check-white-icon-writing-x-webflow-template.svg"
+                    class="icon-list"
+                  />
+                  <div class="text-200 medium color-neutral-100">
+                    Access to 100+ existing premium posts
+                  </div>
+                </div>
+                <div class="icon-list-item-wrapper">
+                  <img
+                    alt="check-white-icon-writing-x-webflow-template"
+                    src="https://assets-global.website-files.com/640b89353805ffecac6d519d/640b89353805ff9b3b6d53d8_check-white-icon-writing-x-webflow-template.svg"
+                    class="icon-list"
+                  />
+                  <div class="text-200 medium color-neutral-100">
+                    Support our small team
+                  </div>
+                </div>
+                <div class="icon-list-item-wrapper">
+                  <img
+                    alt="check-white-icon-writing-x-webflow-template"
+                    src="https://assets-global.website-files.com/640b89353805ffecac6d519d/640b89353805ff9b3b6d53d8_check-white-icon-writing-x-webflow-template.svg"
+                    class="icon-list"
+                  />
+                  <div class="text-200 medium color-neutral-100">
+                    Receive 3 premium posts every week
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          id="w-node-_0f6c725e-0b3e-5e5f-324b-b09acba228f9-396d51bc"
+          class="position-sticky top-24px position-static---tablet"
+        >
+          <div class="inner-container _460px _100---tablet">
+            <div
+              data-w-id="dbf466ca-8f17-e78b-fa11-038c0e2b26a8"
+              style="opacity: 1"
+              class="card pricing-card"
+            >
+              <div class="pricing-card-content-top">
+                <div class="inner-container _450px---mbl">
+                  <h2 class="heading-h4-size mg-bottom-12px">
+                    Choose your subscription duration
+                  </h2>
+                  <p class="mg-bottom-24px keep">
+                    Lorem ipsum dolor sit amet consectetur lorem adipiscing elit
+                    facilisis
+                    <span class="text-no-wrap">tempus sollicitudi.</span>
+                  </p>
+                </div>
+                <div
+                  id="price-display"
+                  data-wf-sku-conditions="%7B%22condition%22%3A%7B%22fields%22%3A%7B%22default-sku%3Aprice%22%3A%7B%22exists%22%3A%22yes%22%2C%22type%22%3A%22CommercePrice%22%7D%7D%7D%2C%22timezone%22%3A%22America%2FMexico_City%22%7D"
+                  class="mg-bottom-22px"
+                >
+                  <div class="price-flex-wrapper">
+                    <div
+                      data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+                      class="display-2"
+                    >
+                      ₹&nbsp;0.00&nbsp;INR
+                    </div>
+                    <div class="display-2 mg-right-12px"></div>
+                    <div
+                      data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_compare_at_price_7dr10dr%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+                      class="text-400 top-8px text-strikethrough"
+                    >
+                      ₹&nbsp;0.00&nbsp;INR
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="add-to-cart">
+                <form method="POST" id="subcription-form">
+                  {% csrf_token %}
+                  <div class="mg-bottom-24px">
+                    <div class="flex-horizontal">
+                      <div
+                        data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_values_3dr%22%2C%22to%22%3A%22optionValues%22%7D%5D"
+                        data-commerce-product-sku-values="%7B%22523d9c33b280d2be97b00d3d06321314%22%3A%228ff347ae5edf80dfe08f9607f577f96f%22%7D"
+                        data-node-type="commerce-add-to-cart-option-list"
+                        data-commerce-product-id="640b89353805ff7b3c6d5389"
+                        data-preselect-default-variant="false"
+                        class="width-100"
+                        role="group"
+                      >
+                        <div role="group">
+                          <div class="input white select-wrapper">
+                            <select
+                              name="plan"
+                              id="option-set-523d9c33b280d2be97b00d3d06321314"
+                              data-node-type="commerce-add-to-cart-option-select"
+                              data-commerce-option-set-id="523d9c33b280d2be97b00d3d06321314"
+                              class="input white select-input w-select"
+                              required=""
+                            >
+                              <option selected="" value="">
+                                Select duration
+                              </option>
+                              <option value="3months">3 Months Plan</option>
+                              <option value="6months">6 Months Plan</option>
+                              <option value="1year">1 Year Plan</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div></div>
+                    </div>
+                  </div>
+                  <div class="buttons-row">
+                    <input
+                      type="submit"
+                      value="Subscribe"
+                      class="btn-primary button-row add-cart-btn"
+                    />
+                  </div>
+                </form>
+                <div
+                  style="display: none"
+                  class="w-commerce-commerceaddtocartoutofstock empty-state card-empty"
+                  tabindex="0"
+                >
+                  <div>This product is out of stock.</div>
+                </div>
+                <div
+                  aria-live=""
+                  data-node-type="commerce-add-to-cart-error"
+                  style="display: none"
+                  class="w-commerce-commerceaddtocarterror error-message"
+                >
+                  <div
+                    data-node-type="commerce-add-to-cart-error"
+                    data-w-add-to-cart-quantity-error="Product is not available in this quantity."
+                    data-w-add-to-cart-general-error="Something went wrong when adding this item to the cart."
+                    data-w-add-to-cart-mixed-cart-error="You can’t purchase another product with a subscription."
+                    data-w-add-to-cart-buy-now-error="Something went wrong when trying to purchase this item."
+                    data-w-add-to-cart-checkout-disabled-error="Checkout is disabled on this site."
+                    data-w-add-to-cart-select-all-options-error="Please select an option in each set."
+                  >
+                    Product is not available in this quantity.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-w-id="eaee31c3-7d79-8e0a-3ced-8f8c2cb4c1cd"
+          style="
+            transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+              rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+            opacity: 1;
+            transform-style: preserve-3d;
+          "
+          class="inner-container _690px _100---tablet"
+        >
+          <div class="rich-text-v2 w-richtext">
+            <h2>About the subscription</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis
+              arcu enim urna adipiscing praesent velit viverra sit semper
+              <strong>lorem eu cursus vel</strong> hendrerit elementum morbi
+              curabitur etiam nibh justo, lorem aliquet donec sed sit mi
+              dignissim at ante massa mattis egestas.
+            </p>
+            <ol start="" role="list">
+              <li>
+                Neque sodales ut etiam sit amet nisl purus non tellus orci ac
+                auctor.
+              </li>
+              <li>
+                Adipiscing elit ut aliquam purus sit amet viverra suspendisse
+                potenti .
+              </li>
+              <li>
+                Mauris commodo quis imperdiet massa tincidunt nunc hendrerit
+                pulvinar.
+              </li>
+              <li>
+                Adipiscing elit ut aliquam purus sit amet viverra suspendisse
+                potenti .
+              </li>
+            </ol>
+            <h3>What’s included in your subscription?</h3>
+            <p>
+              Vitae congue eu donec enim diam consequat ac felis ipsum dolor sit
+              amet, consectetur adipiscing elit lobortis arcu enim urna
+              adipiscing praesent velit viverra sit semper
+              <strong>lorem eu cursus vel</strong> hendrerit elementum morbi
+              curabitur etiam nibh justo, lorem aliquet donec sed sit mi
+              dignissim at ante massa mattis egestas.<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="half-bg-top product-page"></div>
+</section>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  let plan = document.getElementById(
+    "option-set-523d9c33b280d2be97b00d3d06321314"
+  );
+  let form = document.getElementById("subcription-form");
+
+  // listen to form submit
+  form.onsubmit = function (event) {
+    event.preventDefault();
+
+    // creating order
+    fetch("/razorpay_order/", {
+      method: "POST",
+      body: new FormData(event.target),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+
+        var options = {
+          key: "rzp_test_6sinDDTQYunkhF", // Enter the Key ID generated from the Dashboard
+          amount: response.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+          currency: "INR",
+          name: "Knowledge Keep", //your business name
+          description: "Subscription",
+          image: "https://raw.githubusercontent.com/JAChesney/django-website-knowledgekeep/main/knowledgekeep/templates/assets/knowlegekeeplogo.svg",
+          order_id: response.id, //This is a sample Order ID. Pass the id obtained in the response of Step 1
+          theme: {
+            color: "#000",
+          },
+          handler: function(response) {
+            console.log("Payment Successful")
+            console.log(response);
+
+            // saving user data to back end
+            fetch("/subscription/", {
+                method: "POST",
+                body: new FormData(event.target),
+              })
+                .then((response) => response.json())
+                .then((response) => {
+                  console.log(response);
+                  window.location.assign('/')
+                }).catch(error => console.log(error))
+          }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+      })
+      .catch((response) => console.log(response));
+  };
+
+  // listing to value change to update price display
+  plan.onchange = function (event) {
+    let value = event.target.value;
+    let price, sub_price;
+
+    // updating price value
+    if (value === "3months") {
+      price = "49";
+      sub_price = "70";
+    } else if (value === "6months") {
+      price = "89";
+      sub_price = "100";
+    } else if (value === "1year") {
+      price = "129";
+      sub_price = "150";
+    } else {
+      price = "0.00";
+      sub_price = "0.00";
+    }
+
+    document.getElementById("price-display").innerHTML = `
+        <div class="price-flex-wrapper">
+            <div
+              data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+              class="display-2"
+            >
+            ₹&nbsp;${price}&nbsp;INR
+            </div> <br>
+            <div class="display-2 mg-right-12px"></div>
+            <div
+              data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_compare_at_price_7dr10dr%22%2C%22to%22%3A%22innerHTML%22%7D%5D"
+              class="text-400 top-8px text-strikethrough"
+            >
+            ₹&nbsp;${sub_price}&nbsp;INR
+        </div>
+        `;
+  };
+</script>
+{% endblock %}

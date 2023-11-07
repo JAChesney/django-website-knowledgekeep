@@ -241,6 +241,12 @@
                   >Contact</a
                 >
               </li>
+              </li>
+              <li class="header-nav-list-item left">
+                <a href="/papers" class="header-nav-link w-nav-link"
+                  >All Papers</a
+                >
+              </li>
               {% if request.user.is_authenticated %}
               <li class="header-nav-list-item left">
                 <a href="/addpaper/" class="header-nav-link w-nav-link"
@@ -248,7 +254,7 @@
                 >
               </li>
               {% endif %}
-              <li class="header-nav-list-item left">
+              {% comment %} <li class="header-nav-list-item left">
                 <div
                   data-hover="true"
                   data-delay="0"
@@ -315,7 +321,7 @@
                     </div>
                   </nav>
                 </div>
-              </li>
+              </li> {% endcomment %}
             </ul>
           </nav>
 
@@ -439,13 +445,15 @@
               </div>
             </nav>
           </div>
+          {% if request.user.is_authenticated and not request.user.has_subscribed %}
           <div>
             <a
-              href="/subscribe-pages/subscribe-paid-v1"
+              href="/subscription"
               class="btn-primary small header-btn-hidde-on-mb w-button"
               >Subscribe</a
             >
           </div>
+          {% endif %}
         </div>
       </div>
     </div>

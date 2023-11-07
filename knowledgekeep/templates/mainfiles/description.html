@@ -1,0 +1,375 @@
+{% extends 'base.html' %} {% block content %}
+
+<!-- nav bar -->
+{% include 'includes/navbar.html' %}
+<section class="section hero v15">
+    <div class="container-default w-container">
+      <div class="mg-bottom-48px">
+        <div
+          data-w-id="66239862-f976-9aa5-4692-104b01ddc9f7"
+          class="inner-container _700px center"
+        >
+          <div class="flex-vertical center text-center">
+            <div class="details-wrapper blog-details mg-bottom-24px">
+              <a
+                href="/blog-category/marketing"
+                class="badge-secondary small light"
+                >{{ single_row.type }}</a
+              >
+              <div class="text-100 medium">May 2, 2023</div>
+            </div>
+            <h1 class="display-1">
+              {{ single_row.paper_name }}
+            </h1>
+            <div class="inner-container _652px">
+              <p class="mg-bottom-0">
+                Lorem ipsum dolor sit amet consectetur adipiscing elit ut
+                aliquam purus sit amet luctus venenatis, lectus magna
+                fringilla urna, porttitor rhoncus dolor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        data-w-id="66239862-f976-9aa5-4692-104b01ddc9ff"
+        alt="ASO: How to rank your app in the mobile app stores"
+        style="opacity: 1"
+        src="https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff58006d5411_mobile-app-stores-feature-image-writing-x-webflow-template.jpg"
+        sizes="(max-width: 479px) 92vw, (max-width: 767px) 94vw, (max-width: 991px) 95vw, (max-width: 1439px) 96vw, 1238px"
+        srcset="
+          https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff58006d5411_mobile-app-stores-feature-image-writing-x-webflow-template-p-500.jpg   500w,
+          https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff58006d5411_mobile-app-stores-feature-image-writing-x-webflow-template-p-800.jpg   800w,
+          https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff58006d5411_mobile-app-stores-feature-image-writing-x-webflow-template-p-1080.jpg 1080w,
+          https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff58006d5411_mobile-app-stores-feature-image-writing-x-webflow-template-p-1600.jpg 1600w,
+          https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff58006d5411_mobile-app-stores-feature-image-writing-x-webflow-template.jpg        2466w
+        "
+        class="image"
+      /> 
+    </div>
+       
+    <div class="mg-top-48px center text-center">
+        {% comment %} <button class="btn-primary small header-btn-hidde-on-mb w-button" data-toggle="modal" data-target="#exampleModal">View Pdf</a> {% endcomment %}
+        <!-- Add a button to trigger the modal -->
+        <button class="btn-primary small header-btn-hidde-on-mb w-button" id="openModal">View PDF</button>
+
+        <!-- Create the modal structure -->
+        <div class="modal" id="pdfModal">
+          <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <!-- Embed your PDF viewer here -->
+            <iframe src="{{ single_row.file.url }}" width="100%" height="500px" title="{{ single_row.paper_name }}"></iframe>
+          </div>
+        </div>
+
+    </div>
+  </section>
+  <section class="section pd-top-0px">
+    <div class="container-default w-container">
+      <div class="inner-container _700px center">
+        <div class="inner-container _500px---mbl center">
+          <div
+            data-w-id="4ef82e7c-6773-9609-9c12-70c40891e130"
+            class="rich-text w-richtext"
+          >
+            <h2>Description</h2>
+            <p>
+              {{ single_row.paper_description }}
+            </p>
+            {% comment %} <blockquote>
+              “Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat uis aute irure
+              dolor in reprehenderit in voluptate velit”
+            </blockquote> {% endcomment %}
+            
+          </div>
+          <div
+            data-w-id="abda9ec6-4d6c-4755-3a4c-fbb42afd6227"
+            class="mg-top-64px mg-top-48px---mbp"
+          >
+            <div class="card authors-card">
+              <div class="flex-horizontal start flex-wrap---rows-10px">
+                <a
+                  href="/team/sophie-moore"
+                  class="avatar-circle _04 mg-right-32px bg-neutral-100 w-inline-block"
+                  ><img
+                    src="https://assets-global.website-files.com/640b89353805ff39126d51c7/6451b647e505d93544e43e8d_author-2-writing-x-webflow-template.png"
+                    alt="Sophie Moore"
+                    class="avatar-image link"
+                /></a>
+                <div>
+                  <a
+                    href="/team/sophie-moore"
+                    class="content-link hover---opacity w-inline-block"
+                    ><div class="display-4 mg-bottom-4px">{{ single_row.user.full_name }}</div>
+                    <div class="mg-bottom-10px">
+                      <div class="text-200 medium">Marketing writer</div>
+                    </div></a
+                  >
+                  <div
+                    class="w-layout-grid social-media-grid-top small author-blog"
+                  >
+                    <a
+                      href="https://facebook.com/"
+                      target="_blank"
+                      class="social-icon-square size-24px w-inline-block"
+                      ><div class="social-icon-font"></div></a
+                    ><a
+                      href="https://twitter.com/"
+                      target="_blank"
+                      class="social-icon-square size-24px w-inline-block"
+                      ><div class="social-icon-font"></div></a
+                    ><a
+                      href="https://www.instagram.com/"
+                      target="_blank"
+                      class="social-icon-square size-24px w-inline-block"
+                      ><div class="social-icon-font"></div></a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div
+                class="divider-vertical _10px horizontal---20px-mbl"
+              ></div>
+              <div class="inner-container _310px _100---mbl">
+                <div class="width-100-mbl">
+                  <p class="mg-bottom-0">
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit
+                    massa sed mattis ut orci risus vehicula dignissim.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-neutral-200 overflow-hidden">
+    <div class="container-default w-container">
+      <div class="inner-container _500px---mbl center">
+        <div
+          data-w-id="496336c4-f3e2-b4dc-3872-7c385cc25e28"
+          class="mg-bottom-40px"
+        >
+          <div class="text-center---mbl">
+            <div class="w-layout-grid grid-2-columns title-and-buttons">
+              <h2 class="heading-h2-size mg-bottom-0">Related articles</h2>
+              <div
+                id="w-node-_79ded11e-963c-e41f-f00c-3ce900433429-4d6d51b9"
+                class="buttons-row center---mbl"
+              >
+                <a href="/blog-pages/blog-v1" class="btn-secondary w-button"
+                  >Browse all articles</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-w-id="42eb8af7-3776-83f0-4d50-7f73d41b441b"
+          class="w-dyn-list"
+        >
+          <div
+            role="list"
+            class="grid-2-columns blog-trending-v2-grid w-dyn-items"
+          >
+            <div role="listitem" class="height-100 w-dyn-item">
+              <a
+                data-w-id="42eb8af7-3776-83f0-4d50-7f73d41b441e"
+                href="/blog/how-product-design-can-boost-your-online-business"
+                class="article-link article-horizontal-grid w-inline-block"
+                ><div class="image-wrapper article-horizontal-image">
+                  <img
+                    alt="How product design can boost your online business"
+                    src="https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ffd8246d5496_boost-business-thumbnail-image-writing-x-webflow-template.jpg"
+                    sizes="(max-width: 479px) 92vw, (max-width: 767px) 90vw, (max-width: 991px) 46vw, (max-width: 1439px) 17vw, 220px"
+                    srcset="
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ffd8246d5496_boost-business-thumbnail-image-writing-x-webflow-template-p-500.jpg  500w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ffd8246d5496_boost-business-thumbnail-image-writing-x-webflow-template-p-800.jpg  800w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ffd8246d5496_boost-business-thumbnail-image-writing-x-webflow-template.jpg       1560w
+                    "
+                    class="article-picture fit-cover _w-h-100"
+                  />
+                </div>
+                <div
+                  id="w-node-_42eb8af7-3776-83f0-4d50-7f73d41b4421-4d6d51b9"
+                  class="inner-container article-horizontal-content"
+                >
+                  <h3 class="article-title display-4 mg-bottom-12px">
+                    How product design can boost your online business
+                  </h3>
+                  <div class="inner-container _328px">
+                    <p class="blog-card-excerpt mg-bottom-12px">
+                      Lorem ipsum dolor sit amet consectetur lorem
+                      adipiscing elit ridiculus mollis.
+                    </p>
+                    <div class="text-100">
+                      <div
+                        class="flex-horizontal start flex-wrap---rows-10px"
+                      >
+                        <div class="text-100 medium">May 2, 2023</div>
+                        <div class="divider-dot"></div>
+                        <div class="flex-horizontal">
+                          <div class="line-rounded-icon mg-right-6px">
+                            
+                          </div>
+                          <div class="text-100 medium">8 min read</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div></a
+              >
+            </div>
+            <div role="listitem" class="height-100 w-dyn-item">
+              <a
+                data-w-id="42eb8af7-3776-83f0-4d50-7f73d41b441e"
+                href="/blog/how-to-start-an-online-business-in-30-days-or-less"
+                class="article-link article-horizontal-grid w-inline-block"
+                ><div class="image-wrapper article-horizontal-image">
+                  <img
+                    alt="How to start an online business in 30 days or less"
+                    src="https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff1fba6d5495_start-an-businness-thumbnail-image-writing-x-webflow-template.jpg"
+                    sizes="(max-width: 479px) 92vw, (max-width: 767px) 90vw, (max-width: 991px) 46vw, (max-width: 1439px) 17vw, 220px"
+                    srcset="
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff1fba6d5495_start-an-businness-thumbnail-image-writing-x-webflow-template-p-500.jpg   500w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff1fba6d5495_start-an-businness-thumbnail-image-writing-x-webflow-template-p-800.jpg   800w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff1fba6d5495_start-an-businness-thumbnail-image-writing-x-webflow-template-p-1080.jpg 1080w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff1fba6d5495_start-an-businness-thumbnail-image-writing-x-webflow-template.jpg        1560w
+                    "
+                    class="article-picture fit-cover _w-h-100"
+                  />
+                </div>
+                <div
+                  id="w-node-_42eb8af7-3776-83f0-4d50-7f73d41b4421-4d6d51b9"
+                  class="inner-container article-horizontal-content"
+                >
+                  <h3 class="article-title display-4 mg-bottom-12px">
+                    How to start an online business in 30 days or less
+                  </h3>
+                  <div class="inner-container _328px">
+                    <p class="blog-card-excerpt mg-bottom-12px">
+                      Lorem ipsum dolor sit amet consectetur lorem
+                      adipiscing elit ridiculus mollis.
+                    </p>
+                    <div class="text-100">
+                      <div
+                        class="flex-horizontal start flex-wrap---rows-10px"
+                      >
+                        <div class="text-100 medium">May 2, 2023</div>
+                        <div class="divider-dot"></div>
+                        <div class="flex-horizontal">
+                          <div class="line-rounded-icon mg-right-6px">
+                            
+                          </div>
+                          <div class="text-100 medium">16 min read</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div></a
+              >
+            </div>
+            <div role="listitem" class="height-100 w-dyn-item">
+              <a
+                data-w-id="42eb8af7-3776-83f0-4d50-7f73d41b441e"
+                href="/blog/5-design-methodologies-to-improve-your-workflow"
+                class="article-link article-horizontal-grid w-inline-block"
+                ><div class="image-wrapper article-horizontal-image">
+                  <img
+                    alt="5 design methodologies to improve your workflow"
+                    src="https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff6c636d5494_methodologies-improve-thumbnail-image-writing-x-webflow-template.jpg"
+                    sizes="(max-width: 479px) 92vw, (max-width: 767px) 90vw, (max-width: 991px) 46vw, (max-width: 1439px) 17vw, 220px"
+                    srcset="
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff6c636d5494_methodologies-improve-thumbnail-image-writing-x-webflow-template-p-500.jpg  500w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff6c636d5494_methodologies-improve-thumbnail-image-writing-x-webflow-template-p-800.jpg  800w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff6c636d5494_methodologies-improve-thumbnail-image-writing-x-webflow-template.jpg       1560w
+                    "
+                    class="article-picture fit-cover _w-h-100"
+                  />
+                </div>
+                <div
+                  id="w-node-_42eb8af7-3776-83f0-4d50-7f73d41b4421-4d6d51b9"
+                  class="inner-container article-horizontal-content"
+                >
+                  <h3 class="article-title display-4 mg-bottom-12px">
+                    5 design methodologies to improve your workflow
+                  </h3>
+                  <div class="inner-container _328px">
+                    <p class="blog-card-excerpt mg-bottom-12px">
+                      Lorem ipsum dolor sit amet consectetur lorem
+                      adipiscing elit ridiculus mollis.
+                    </p>
+                    <div class="text-100">
+                      <div
+                        class="flex-horizontal start flex-wrap---rows-10px"
+                      >
+                        <div class="text-100 medium">May 2, 2023</div>
+                        <div class="divider-dot"></div>
+                        <div class="flex-horizontal">
+                          <div class="line-rounded-icon mg-right-6px">
+                            
+                          </div>
+                          <div class="text-100 medium">12 min read</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div></a
+              >
+            </div>
+            <div role="listitem" class="height-100 w-dyn-item">
+              <a
+                data-w-id="42eb8af7-3776-83f0-4d50-7f73d41b441e"
+                href="/blog/great-dev-apps-for-programmers-and-product-developers"
+                class="article-link article-horizontal-grid w-inline-block"
+                ><div class="image-wrapper article-horizontal-image">
+                  <img
+                    alt="Great dev apps for programmers and product developers"
+                    src="https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff0db06d5493_analytics-app-thumbnail-image-writing-x-webflow-template.jpg"
+                    sizes="(max-width: 479px) 92vw, (max-width: 767px) 90vw, (max-width: 991px) 46vw, (max-width: 1439px) 17vw, 220px"
+                    srcset="
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff0db06d5493_analytics-app-thumbnail-image-writing-x-webflow-template-p-500.jpg  500w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff0db06d5493_analytics-app-thumbnail-image-writing-x-webflow-template-p-800.jpg  800w,
+                      https://assets-global.website-files.com/640b89353805ff39126d51c7/640b89353805ff0db06d5493_analytics-app-thumbnail-image-writing-x-webflow-template.jpg       1560w
+                    "
+                    class="article-picture fit-cover _w-h-100"
+                  />
+                </div>
+                <div
+                  id="w-node-_42eb8af7-3776-83f0-4d50-7f73d41b4421-4d6d51b9"
+                  class="inner-container article-horizontal-content"
+                >
+                  <h3 class="article-title display-4 mg-bottom-12px">
+                    Great dev apps for programmers and product developers
+                  </h3>
+                  <div class="inner-container _328px">
+                    <p class="blog-card-excerpt mg-bottom-12px">
+                      Lorem ipsum dolor sit amet consectetur lorem
+                      adipiscing elit ridiculus mollis.
+                    </p>
+                    <div class="text-100">
+                      <div
+                        class="flex-horizontal start flex-wrap---rows-10px"
+                      >
+                        <div class="text-100 medium">May 2, 2023</div>
+                        <div class="divider-dot"></div>
+                        <div class="flex-horizontal">
+                          <div class="line-rounded-icon mg-right-6px">
+                            
+                          </div>
+                          <div class="text-100 medium">16 min read</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

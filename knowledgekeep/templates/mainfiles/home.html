@@ -128,27 +128,17 @@
             <div>
               <div
                 data-w-id="b63addac-f781-f7d1-5ff7-91fc94e6781e"
-                style="
-                  -webkit-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -moz-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  -ms-transform: translate3d(0, 10%, 0) scale3d(1, 1, 1)
-                    rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);
-                  transform: translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0)
-                    rotateY(0) rotateZ(0) skew(0, 0);
-                  opacity: 0;
-                "
                 class="w-dyn-list"
               >
                 <div
                   role="list"
                   class="grid-3-columns blog-grid---default trending-grid w-dyn-items"
                 >
+                  {% for paper in papers %}
                   <div role="listitem" class="w-dyn-item">
                     <a
                       data-w-id="b63addac-f781-f7d1-5ff7-91fc94e67821"
-                      href="/blog/aso-how-to-rank-your-app-in-the-mobile-app-stores"
+                      href="{% if request.user.has_subscribed or paper.user == request.user %} {% url 'description' paper.id %} {% else %} /access-denied {% endif %}"
                       class="article-link trending-article w-inline-block"
                       ><div
                         class="blog-card-image-wrapper trending-article-image"
@@ -169,102 +159,22 @@
                       <div>
                         <div class="details-wrapper mg-bottom-12px">
                           <div class="badge-secondary small light">
-                            Marketing
+                            {{ paper.type }}
                           </div>
                           <div class="text-100 medium">May 2, 2023</div>
                         </div>
                         <div class="inner-container _350px---mbp">
                           <h2 class="article-title display-4 mg-bottom-12px">
-                            ASO: How to rank your app in the mobile app stores
+                            {{ paper.paper_name }}
                           </h2>
                         </div>
                         <p class="mg-bottom-0">
-                          Lorem ipsum dolor sit amet consectetur adipiscing elit
-                          ridiculus mollis sem scelerisque purus platea.
+                          {{ paper.short_description }}
                         </p>
                       </div></a
                     >
                   </div>
-                  <div role="listitem" class="w-dyn-item">
-                    <a
-                      data-w-id="b63addac-f781-f7d1-5ff7-91fc94e67821"
-                      href="/blog/learn-how-to-choose-the-best-management-software"
-                      class="article-link trending-article w-inline-block"
-                      ><div
-                        class="blog-card-image-wrapper trending-article-image"
-                      >
-                        <img
-                          src="https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff39846d5490_best-software-thumbnail-image-writing-x-webflow-template.jpg"
-                          alt="Learn how to choose the best management software"
-                          sizes="(max-width: 479px) 92vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, (max-width: 1439px) 30vw, 390px"
-                          srcset="
-                            https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff39846d5490_best-software-thumbnail-image-writing-x-webflow-template-p-500.jpg   500w,
-                            https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff39846d5490_best-software-thumbnail-image-writing-x-webflow-template-p-800.jpg   800w,
-                            https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff39846d5490_best-software-thumbnail-image-writing-x-webflow-template-p-1080.jpg 1080w,
-                            https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff39846d5490_best-software-thumbnail-image-writing-x-webflow-template.jpg        1560w
-                          "
-                          class="article-picture fit-cover _w-h-100"
-                        />
-                      </div>
-                      <div>
-                        <div class="details-wrapper mg-bottom-12px">
-                          <div class="badge-secondary small light">
-                            Computer Science
-                          </div>
-                          <div class="text-100 medium">May 2, 2023</div>
-                        </div>
-                        <div class="inner-container _350px---mbp">
-                          <h2 class="article-title display-4 mg-bottom-12px">
-                            Learn how to choose the best management software
-                          </h2>
-                        </div>
-                        <p class="mg-bottom-0">
-                          Lorem ipsum dolor sit amet consectetur adipiscing elit
-                          ridiculus mollis sem scelerisque purus platea.
-                        </p>
-                      </div></a
-                    >
-                  </div>
-                  <div role="listitem" class="w-dyn-item">
-                    <a
-                      data-w-id="b63addac-f781-f7d1-5ff7-91fc94e67821"
-                      href="/blog/how-to-create-a-powerful-marketing-sales-funnel"
-                      class="article-link trending-article w-inline-block"
-                      ><div
-                        class="blog-card-image-wrapper trending-article-image"
-                      >
-                        <img
-                          src="https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff7a066d548f_powerful-marketing-thumbnail-image-writing-x-webflow-template.jpg"
-                          alt="How to create a powerful marketing sales funnel"
-                          sizes="(max-width: 479px) 92vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, (max-width: 1439px) 30vw, 390px"
-                          srcset="
-                            https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff7a066d548f_powerful-marketing-thumbnail-image-writing-x-webflow-template-p-500.jpg   500w,
-                            https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff7a066d548f_powerful-marketing-thumbnail-image-writing-x-webflow-template-p-800.jpg   800w,
-                            https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff7a066d548f_powerful-marketing-thumbnail-image-writing-x-webflow-template-p-1080.jpg 1080w,
-                            https://assets.website-files.com/640b89353805ff39126d51c7/640b89353805ff7a066d548f_powerful-marketing-thumbnail-image-writing-x-webflow-template.jpg        1560w
-                          "
-                          class="article-picture fit-cover _w-h-100"
-                        />
-                      </div>
-                      <div>
-                        <div class="details-wrapper mg-bottom-12px">
-                          <div class="badge-secondary small light">
-                            Marketing
-                          </div>
-                          <div class="text-100 medium">May 2, 2023</div>
-                        </div>
-                        <div class="inner-container _350px---mbp">
-                          <h2 class="article-title display-4 mg-bottom-12px">
-                            How to create a powerful marketing sales funnel
-                          </h2>
-                        </div>
-                        <p class="mg-bottom-0">
-                          Lorem ipsum dolor sit amet consectetur adipiscing elit
-                          ridiculus mollis sem scelerisque purus platea.
-                        </p>
-                      </div></a
-                    >
-                  </div>
+                  {% endfor %}
                 </div>
               </div>
             </div>
